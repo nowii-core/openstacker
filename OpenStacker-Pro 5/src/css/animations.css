@@ -1,0 +1,65 @@
+@keyframes boot-loading { 0% { transform: translateX(-120%); } 100% { transform: translateX(360%); } }
+@keyframes boot-pulse { from { transform: translateY(0) scale(.86); opacity: .45; } to { transform: translateY(-2px) scale(1); opacity: 1; } }
+@keyframes hero-glow { 0%,100% { opacity: .5; transform: scale(1) rotate(0); } 50% { opacity: .9; transform: scale(1.06) rotate(2deg); } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(22px); } }
+@keyframes reveal-up { from { opacity: 0; transform: translateY(34px) scale(.975); } }
+@keyframes gradient-pan { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes glow-pulse { 0%,100% { box-shadow: 0 0 0 rgba(var(--accent-rgb),0); } 50% { box-shadow: 0 0 28px rgba(var(--accent-rgb),.10); } }
+@keyframes orbit-slow { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes shimmer { from { background-position: 120% 0; } to { background-position: -120% 0; } }
+@keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes ring-expand { 0% { opacity: .4; transform: scale(.8); } 100% { opacity: 0; transform: scale(1.65); } }
+@keyframes ticker-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes modal-pop { from { opacity: 0; transform: translateY(12px) scale(.975); filter: blur(5px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes toast-in { from { opacity: 0; transform: translateX(16px) scale(.97); } to { opacity: 1; transform: translateX(0) scale(1); } }
+@keyframes card-shine { 0% { transform: translateX(-150%) rotate(14deg); } 50%,100% { transform: translateX(250%) rotate(14deg); } }
+.reveal { opacity: 0; transform: translateY(18px); }
+.reveal.is-visible { opacity: 1; transform: none; animation: reveal-up .9s var(--ease-apple) backwards; animation-delay: var(--reveal-delay, 0ms); }
+.page-enter { animation: fade-up .7s var(--ease-apple) backwards; }
+.animate-gradient { background-size: 220% 220%; animation: gradient-pan 8s ease-in-out infinite; }
+
+/* ---------- Apple-style motion layer ---------- */
+@keyframes card-in { from { opacity: 0; transform: translateY(22px) scale(.965); } }
+@keyframes line-rise { from { opacity: 0; transform: translateY(.45em); filter: blur(14px); } }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.38); } 100% { transform: scale(1); } }
+@keyframes vt-out { to { opacity: 0; transform: scale(.985); filter: blur(6px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(16px) scale(1.01); filter: blur(8px); } }
+/* "backwards" fill: the animation never overrides the hover/tilt transform once it has finished. */
+.card-in { animation: card-in .75s var(--ease-apple) backwards; animation-delay: calc(var(--i, 0) * 32ms); }
+.card-action.is-popping, .button.is-popping { animation: pop .5s var(--ease-spring); }
+.button:active, .icon-button:active, .filter-pill:active, .category-card:active { transform: scale(.965); transition-duration: .08s; }
+.filter-pill, .button, .icon-button, .category-card { transition-timing-function: var(--ease-apple); }
+.hero h1 .hero-line { animation: line-rise 1.2s var(--ease-apple) .15s backwards; }
+.hero h1 .hero-line + .hero-line { animation-delay: .34s; }
+.hero h1 .accent-line { animation: line-rise 1.2s var(--ease-apple) .34s backwards, gradient-pan 8s ease-in-out infinite; }
+/* Hero reacts to scroll through a single CSS variable (--hero-p, 0 → 1) */
+.hero-content { transform: translate3d(0, calc(var(--hero-p, 0) * 54px), 0) scale(calc(1 - var(--hero-p, 0) * .06)); opacity: calc(1 - var(--hero-p, 0) * .85); transform-origin: 50% 0; will-change: transform, opacity; }
+.hero-orbit { transform: translate(-50%, -50%) rotate(calc(-8deg + var(--hero-p, 0) * 24deg)) scale(calc(1 + var(--hero-p, 0) * .3)); }
+/* Slides (featured carousel) */
+.carousel { --slide: min(372px, 82vw); position: relative; }
+.carousel-track { display: flex; gap: 16px; overflow-x: auto; padding: 18px 4px 26px; scroll-padding-inline: 4px; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; cursor: grab; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track.is-dragging { scroll-snap-type: none; cursor: grabbing; user-select: none; }
+.carousel-track img, .carousel-track a { -webkit-user-drag: none; }
+.carousel-slide { display: flex; flex: 0 0 var(--slide); scroll-snap-align: start; }
+.carousel-slide .tool-card { width: 100%; }
+.carousel-controls { display: flex; align-items: center; gap: 18px; margin-top: 4px; }
+.carousel-progress { flex: 1; height: 3px; overflow: hidden; border-radius: 3px; background: var(--line); }
+.carousel-progress span { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transform-origin: 0 50%; transform: scaleX(.06); transition: transform .25s var(--ease-apple); }
+.carousel-dots { display: flex; gap: 6px; }
+.carousel-dot { width: 6px; height: 6px; padding: 0; border-radius: 50%; background: var(--line-strong); transition: width .35s var(--ease-apple), background .3s; }
+.carousel-dot.is-active { width: 20px; border-radius: 6px; background: var(--accent); }
+.carousel-arrows { display: flex; gap: 8px; }
+.carousel-arrows .icon-button:disabled { opacity: .3; pointer-events: none; }
+.catalog-more { display: flex; justify-content: center; margin-top: 22px; }
+/* Route transitions (View Transitions API, progressive enhancement) */
+::view-transition-old(root) { animation: vt-out .3s var(--ease-apple) both; }
+::view-transition-new(root) { animation: vt-in .55s var(--ease-apple) both; }
+@media (max-width: 760px) { .carousel-dots { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+  .ambient-canvas { display: none; }
+  .hero-content, .hero-orbit { transform: none; opacity: 1; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}

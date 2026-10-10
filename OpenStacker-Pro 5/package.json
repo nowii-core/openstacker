@@ -1,0 +1,16 @@
+{
+  "name": "openstacker-pro",
+  "version": "2.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Bilingual, animated digital tools directory built with native HTML, CSS and JavaScript modules.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test",
+    "check": "node --check src/js/main.js && node --check src/js/catalog.js && node --check src/js/effects.js && node --check src/js/backend.js && node --check src/js/i18n.js && node --check src/js/config.js && node --check scripts/dev-server.mjs && node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

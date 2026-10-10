@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#090a0f">
+  <meta name="description" content="Scopri, filtra e confronta tool gratuiti, freemium e a pagamento per sviluppo, cybersecurity, AI, design e produttività.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OpenStacker Pro — Find your next tool">
+  <meta property="og:description" content="Una directory curata di strumenti digitali per creativi, sviluppatori e team.">
+  <meta property="og:image" content="./assets/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/tokens.css">
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link rel="stylesheet" href="./src/css/animations.css">
+  <title>OpenStacker Pro — Catalogo di strumenti digitali</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skipLink">Vai al contenuto</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas class="ambient-canvas" id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="background-orb orb-one" aria-hidden="true"></div>
+  <div class="background-orb orb-two" aria-hidden="true"></div>
+  <div class="boot-screen" id="boot-screen" aria-hidden="true">
+    <div class="boot-mark"><span></span><span></span><span></span><span></span></div>
+    <div class="boot-name">OPENSTACKER<span> / PRO</span></div>
+    <div class="boot-track"><span></span></div>
+  </div>
+
+  <div class="site-shell" id="site-shell">
+    <header class="site-header" id="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#/" aria-label="OpenStacker Pro home">
+          <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-wordmark">openstacker<span>PRO</span></span>
+        </a>
+        <nav class="primary-nav" id="primary-nav" aria-label="Navigazione principale">
+          <a href="#catalog" data-nav="explore">Esplora</a>
+          <a href="#categories" data-nav="categories">Categorie</a>
+          <a href="#pricing" data-nav="pricing">Prezzi</a>
+          <a href="#about" data-nav="about">Progetto</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button search-trigger" id="open-command" aria-label="Cerca" title="Cerca (⌘K)"><span class="ui-icon">⌕</span><kbd>⌘ K</kbd></button>
+          <button class="icon-button" id="language-toggle" aria-label="Change language" title="Lingua">IT</button>
+          <button class="icon-button" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema"><span class="ui-icon" id="theme-icon">☼</span></button>
+          <button class="button button-quiet header-account" id="account-button"><span class="account-dot"></span><span id="account-label">Accedi</span></button>
+          <button class="mobile-menu-button icon-button" id="mobile-menu-toggle" aria-label="Apri menu"><span class="ui-icon">☰</span></button>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" hidden>
+        <a href="#catalog" data-nav="explore">Esplora</a><a href="#categories" data-nav="categories">Categorie</a><a href="#pricing" data-nav="pricing">Prezzi</a><a href="#about" data-nav="about">Progetto</a>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div id="app-view" class="page-stage" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand-block">
+          <a class="brand" href="#/" aria-label="OpenStacker home"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-wordmark">openstacker<span>PRO</span></span></a>
+          <p data-i18n="footerText">Un progetto indipendente per scoprire strumenti digitali.</p>
+        </div>
+        <div class="footer-links"><a href="#catalog" data-nav="explore">Esplora</a><a href="#categories" data-nav="categories">Categorie</a><button type="button" id="footer-submit" data-i18n="footerSubmit">Proponi un tool</button><a href="./privacy.html" id="privacy-link">Privacy</a><a href="./terms.html" id="terms-link">Condizioni</a><a href="./README.md" id="documentation-link" target="_blank" rel="noopener noreferrer" data-i18n="docsLabel">Documentazione</a></div>
+        <div class="footer-note"><span class="footer-status"><i></i><span id="backend-status-text">Modalità demo locale</span></span><p data-i18n="footerPrivacy">Verifica licenze e listini ufficiali.</p></div>
+      </div>
+      <div class="container footer-bottom"><span>© <span id="current-year"></span> OpenStacker Pro</span><span data-i18n="footerPrivacy">Prezzi e funzioni possono cambiare.</span><button type="button" id="back-to-top" data-i18n="footerTop">Torna su ↑</button></div>
+    </footer>
+  </div>
+
+  <div class="compare-dock" id="compare-dock" hidden>
+    <div class="compare-dock-copy"><strong id="compare-count">0</strong><span id="compare-selected-label">selezionati</span></div>
+    <div class="compare-dock-avatars" id="compare-avatars"></div>
+    <button class="button button-primary button-small" id="compare-open">Confronta ora <span aria-hidden="true">↗</span></button>
+    <button class="icon-button small-icon" id="compare-clear" aria-label="Svuota selezione" title="Svuota">×</button>
+  </div>
+
+  <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="false"></div>
+  <div id="modal-root"></div>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
