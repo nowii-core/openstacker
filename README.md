@@ -1,7 +1,4 @@
-[readme_md.md](https://github.com/user-attachments/files/33276578/readme_md.md)
-<div align="center">
-
-  # ⚡ OpenStacker Pro
+ # ⚡ OpenStacker Pro
 
   <p align="center">
     <b>Piattaforma Web Modulare, Reattiva e ad Alte Prestazioni per la Gestione e Catalogazione di Risorse Tecnologiche</b>
