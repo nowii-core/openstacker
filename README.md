@@ -1,4 +1,4 @@
- # ⚡ OpenStacker Pro
+ #  OpenStacker Pro
 
   <p align="center">
     <b>Piattaforma Web Modulare, Reattiva e ad Alte Prestazioni per la Gestione e Catalogazione di Risorse Tecnologiche</b>
@@ -30,7 +30,7 @@
 
 </div>
 
-## 📌 Panoramica
+##  Panoramica
 
 **OpenStacker Pro** è un'applicazione web moderna e modulare progettata per offrire un'interfaccia utente fluida, veloce e priva di sovrastrutture commerciali pesanti. Sviluppata secondo i principi del codice pulito (*Clean Code*) e dell'architettura a componenti separati, integra una gestione nativa del catalogo, supporto per la localizzazione (i18n), persistenza dati mediante Supabase e una pipeline di test unitari automatizzati.
 
@@ -38,16 +38,16 @@
 
 ## ✨ Funzionalità Chiave
 
-- 📱 **Design Reattivo & Fluid UI:** Layout ottimizzato con Flexbox e CSS Grid avanzato, per un'esperienza omogenea su desktop, tablet e smartphone.
-- 🌐 **Internazionalizzazione Integrata (i18n):** Gestione dinamica del cambio lingua (Italiano / Inglese) e persistenza delle preferenze utente.
-- 📂 **Catalogo Dinamico Integrato:** Filtraggio, ricerca rapida e renderizzazione performante degli elementi di catalogo.
-- ⚡ **Architettura Senza Framework:** Sviluppato in JavaScript puro (ES6+) e CSS modulare per massimizzare la velocità di caricamento ed eliminare la dipendenza da bundle pesanti.
-- 🔒 **Integrazione Backend Supabase:** Gestione sicura del database e persistenza dei dati via client Supabase integrato.
-- 🧪 **Test Suite & Continuous Integration:** Pipeline CI attiva con GitHub Actions per il controllo qualità automatico ad ogni release.
+-  **Design Reattivo & Fluid UI:** Layout ottimizzato con Flexbox e CSS Grid avanzato, per un'esperienza omogenea su desktop, tablet e smartphone.
+-  **Internazionalizzazione Integrata (i18n):** Gestione dinamica del cambio lingua (Italiano / Inglese) e persistenza delle preferenze utente.
+-  **Catalogo Dinamico Integrato:** Filtraggio, ricerca rapida e renderizzazione performante degli elementi di catalogo.
+-  **Architettura Senza Framework:** Sviluppato in JavaScript puro (ES6+) e CSS modulare per massimizzare la velocità di caricamento ed eliminare la dipendenza da bundle pesanti.
+-  **Integrazione Backend Supabase:** Gestione sicura del database e persistenza dei dati via client Supabase integrato.
+-  **Test Suite & Continuous Integration:** Pipeline CI attiva con GitHub Actions per il controllo qualità automatico ad ogni release.
 
 ---
 
-## 🛠 Stack Tecnologico
+##  Stack Tecnologico
 
 ### Frontend
 - **HTML5:** Marcatura semantica conforme agli standard WCAG per l'accessibilità.
@@ -63,7 +63,7 @@
 
 ---
 
-## 📂 Architettura del Progetto
+##  Architettura del Progetto
 
 ```
 OpenStacker-Pro/
@@ -93,7 +93,7 @@ OpenStacker-Pro/
 
 ---
 
-## 🚀 Guida Rapida
+##  Guida Rapida
 
 ### Requisiti Prerequisiti
 - **Node.js** v18.0.0 o superiore
@@ -120,7 +120,7 @@ OpenStacker-Pro/
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Per eseguire la suite di test locali e verificare la stabilità dei moduli:
 
@@ -133,13 +133,13 @@ I test coprono la logica del catalogo, la verifica dei file principali e le funz
 
 ---
 
-## 📄 Licenza
+##  Licenza
 
 Questo progetto è distribuito sotto licenza **MIT**. Consulta il file [`LICENSE`](./LICENSE) per maggiori informazioni.
 
 ---
 
-## 📞 Contatti & Supporto
+##  Contatti & Supporto
 
 - **Maintainer:** [@nowii-core](https://github.com/nowii-core)
 - **Bug Report & Feature Requests:** Se riscontri un problema o desideri proporre un miglioramento, apri una [Issue](https://github.com/nowii-core/OpenStacker-Pro/issues) o invia una [Pull Request](https://github.com/nowii-core/OpenStacker-Pro/pulls).
