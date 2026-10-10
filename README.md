@@ -36,7 +36,7 @@
 
 ---
 
-## ✨ Funzionalità Chiave
+##  Funzionalità Chiave
 
 -  **Design Reattivo & Fluid UI:** Layout ottimizzato con Flexbox e CSS Grid avanzato, per un'esperienza omogenea su desktop, tablet e smartphone.
 -  **Internazionalizzazione Integrata (i18n):** Gestione dinamica del cambio lingua (Italiano / Inglese) e persistenza delle preferenze utente.
