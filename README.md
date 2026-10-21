@@ -147,5 +147,5 @@ Questo progetto è distribuito sotto licenza **MIT**. Consulta il file [`LICENSE
 ---
 
 <div align="center">
-  <sub>Sviluppato con cura e attenzione ai dettagli da <b>nowii-core</b></sub>
+  <sub>Sviluppato da <b>nowii-core</b></sub>
 </div>
