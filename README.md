@@ -40,6 +40,8 @@
 
 ![OpenStacker Pro Screenshot](Screenshot-1.png)
 
+> **Live Demo:** [nowii-core.github.io/openstacker/](https://nowii-core.github.io/openstacker/)
+
 ---
 
 ## Key Features
