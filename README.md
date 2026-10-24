@@ -36,6 +36,12 @@
 
 ---
 
+## Preview
+
+![OpenStacker Pro Screenshot](Screenshot-1.png)
+
+---
+
 ##  Funzionalità Chiave
 
 -  **Design Reattivo & Fluid UI:** Layout ottimizzato con Flexbox e CSS Grid avanzato, per un'esperienza omogenea su desktop, tablet e smartphone.
